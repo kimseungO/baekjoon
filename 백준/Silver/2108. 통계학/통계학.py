@@ -7,8 +7,15 @@ num=[]
 for i in range(n):
     num.append(int(input()))
 
+# 반올림 함수
+def roundy(number):
+    if number >= 0:
+        return int(number + 0.5)
+    else:
+        return int(number - 0.5)
+
 # 산술평균
-mean=round(sum(num)/n)
+mean=roundy(sum(num)/n)
 
 # 중앙값
 sorted_num=sorted(num)
