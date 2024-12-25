@@ -1,13 +1,8 @@
-n = list(map(int, input().split()))
+n = list(map(int,input().split()))
 
-sorted_n = sorted(n)
-is_sorted = sorted_n == n
-is_reversed = list(reversed(sorted_n)) == n
-if is_sorted:
+if n == sorted(n):
     print('ascending')
-
-elif is_reversed:
+elif n == sorted(n, reverse=True):
     print('descending')
-
 else:
     print('mixed')
